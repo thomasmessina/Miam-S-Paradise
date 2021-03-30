@@ -8,19 +8,24 @@ import java.sql.Statement;
 
 public class MainApp {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/miams_paradise?serverTimezone=UTC";
-        String username = "root";
-        String password = "root";
+        // String url = "jdbc:mysql://localhost:3306/miams_paradise?serverTimezone=UTC";
+        String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
+        // Server: mysql-thomas-messina.alwaysdata.net
+        String username = "194765";
+        String password = "MiamSParadise";
+        
+        Fenetre fenetrePrincipale = new Fenetre();
+		fenetrePrincipale.setVisible(true);
 
         try {
             Connection con = DriverManager.getConnection(url, username, password);
             Statement statement = con.createStatement();
 
-            ResultSet resultSet = statement.executeQuery("select * from stock where idstock = 1");
-
+            ResultSet resultSet = statement.executeQuery("select * from utilisateur where idutilisateur = 0");
+            
             while (resultSet.next()) {
-                System.out.println("id: " + resultSet.getInt("idstock"));
-                System.out.println("nom: " + resultSet.getString("condiments"));
+                System.out.println("id: " + resultSet.getInt("idutilisateur"));
+                System.out.println("nom: " + resultSet.getString("nom_utilisateur"));
             }
 
         } catch (SQLException e) {
