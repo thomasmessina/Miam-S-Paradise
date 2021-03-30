@@ -1,30 +1,38 @@
 package Equipe02;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.Scanner;
+
+import Equipe02.dao.StockDao;
+import Equipe02.models.Stock;
 
 public class MainApp {
+
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/miams_paradise?serverTimezone=UTC";
-        String username = "root";
-        String password = "root";
 
-        try {
-            Connection con = DriverManager.getConnection(url, username, password);
-            Statement statement = con.createStatement();
+        String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
+        String user = "194765";
+        String password = "MiamSParadise";
 
-            ResultSet resultSet = statement.executeQuery("select * from stock where idstock = 1");
+        Stock stock = new Stock();
+        // stock.setName("Test");
 
-            while (resultSet.next()) {
-                System.out.println("id: " + resultSet.getInt("idstock"));
-                System.out.println("nom: " + resultSet.getString("condiments"));
-            }
+        Scanner userinput = new Scanner(System.in);
+        System.out.println("Condiment: ");
+        stock.setName(userinput.nextLine());
+        System.out.println("Validation du condiment: " + stock.getName());
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        System.out.println("Utilitaire: ");
+        stock.setUtilitaires(userinput.nextLine());
+        System.out.println("Validation de l'utilitaire: " + stock.getUtilitaires());
+
+        System.out.println("Quantité: ");
+        stock.setQuantite(userinput.nextLine());
+        System.out.println("Validation du stock: " + stock.getQuantite());
+
+        userinput.close();
+
+        StockDao stockDao = new StockDao(url, user, password);
+        stockDao.saveStock(stock);
     }
+
 }
