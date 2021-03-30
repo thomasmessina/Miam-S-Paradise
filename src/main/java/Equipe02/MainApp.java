@@ -14,8 +14,8 @@ public class MainApp {
         String username = "194765";
         String password = "MiamSParadise";
         
-        Fenetre fenetrePrincipale = new Fenetre();
-		fenetrePrincipale.setVisible(true);
+        ActionEvent fenetrePrincipale = new ActionEvent();
+		fenetrePrincipale.frame.setVisible(true);
 
         try {
             Connection con = DriverManager.getConnection(url, username, password);
