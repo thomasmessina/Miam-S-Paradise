@@ -19,6 +19,8 @@ public class MainApp {
         Stock stock = new Stock();
         // stock.setName("Test");
 
+        System.out.println("Ajout stock: ");
+
         Scanner userinput = new Scanner(System.in);
         System.out.println("Condiment: ");
         stock.setName(userinput.nextLine());
@@ -33,6 +35,7 @@ public class MainApp {
         System.out.println("Validation du stock: " + stock.getQuantite());
 
         Reservation reservation = new Reservation();
+        System.out.println("Reservation: ");
 
         System.out.println("Date: ");
         reservation.setDate(userinput.nextLine());

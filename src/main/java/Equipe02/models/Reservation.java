@@ -5,6 +5,7 @@ public class Reservation {
     private String date;
     private String heure;
     private String nom_client;
+    private Long table_idtable;
 
     public Reservation() {
     }
@@ -39,6 +40,14 @@ public class Reservation {
 
     public void setNomClient(String nom_client) {
         this.nom_client = nom_client;
+    }
+
+    public Long getIdtable() {
+        return table_idtable;
+    }
+
+    public void setIdtable(Long table_idtable) {
+        this.table_idtable = table_idtable;
     }
 
     @Override
