@@ -11,6 +11,8 @@ import Equipe02.models.Reservation;
 public class MainApp {
 
     public static void main(String[] args) {
+        ActionEvent fenetrePrincipale = new ActionEvent();
+		fenetrePrincipale.frame.setVisible(true);
 
         String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
         String user = "194765";
