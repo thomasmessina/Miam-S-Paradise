@@ -8,9 +8,7 @@ import java.sql.Statement;
 
 public class MainApp {
     public static void main(String[] args) {
-        // String url = "jdbc:mysql://localhost:3306/miams_paradise?serverTimezone=UTC";
         String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
-        // Server: mysql-thomas-messina.alwaysdata.net
         String username = "194765";
         String password = "MiamSParadise";
         
