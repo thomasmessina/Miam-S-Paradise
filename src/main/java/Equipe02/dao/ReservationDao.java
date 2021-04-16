@@ -36,12 +36,11 @@ public class ReservationDao {
 
                 statement.execute();
             } else {
-                PreparedStatement statement = connection.prepareStatement(
-                        "insert into reservation (date, heure, nom_client, table_idtable) values (?, ?, ?, ?);");
+                PreparedStatement statement = connection
+                        .prepareStatement("insert into reservation (date, heure, nom_client) values (?, ?, ?);");
                 statement.setString(1, reservation.getDate());
                 statement.setString(2, reservation.getHeure());
                 statement.setString(3, reservation.getNomClient());
-                statement.setLong(4, reservation.getIdtable());
                 statement.execute();
             }
 
