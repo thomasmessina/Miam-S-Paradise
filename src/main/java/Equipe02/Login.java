@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import java.lang.Object;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
+import org.xml.sax.Attributes;
 
 /**
  *
