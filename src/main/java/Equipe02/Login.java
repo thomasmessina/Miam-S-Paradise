@@ -78,6 +78,9 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 500, 570, 70));
 
         jButton1.setIcon(new javax.swing.ImageIcon("F:\\kylia\\Cours\\Projet JAVA\\src\\images\\LoginBouton.png")); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
