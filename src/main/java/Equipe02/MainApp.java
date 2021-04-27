@@ -8,11 +8,14 @@ import Equipe02.models.Stock;
 import Equipe02.dao.ReservationDao;
 import Equipe02.models.Reservation;
 
+import Equipe02.dao.LoginDao;
+import Equipe02.models.Login;
+
 public class MainApp {
 
     public static void main(String[] args) {
-        ActionEvent fenetrePrincipale = new ActionEvent();
-		fenetrePrincipale.frame.setVisible(true);
+        // ActionEvent fenetrePrincipale = new ActionEvent();
+        // fenetrePrincipale.frame.setVisible(true);
 
         String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
         String user = "194765";
@@ -51,6 +54,27 @@ public class MainApp {
         reservation.setNomClient(userinput.nextLine());
         System.out.println("Validation du nom du client: " + reservation.getNomClient());
 
+        Login login = new Login();
+        System.out.println("Register: ");
+
+        System.out.println("Nom: ");
+        login.setnomutilisateur(userinput.nextLine());
+        System.out.println("Validation du nom: " + login.getnomutilisateur());
+
+        System.out.println("Password: ");
+        login.setpasswordutilisateur(userinput.nextLine());
+        System.out.println("Validation du password: " + login.getpasswordutilisateur());
+
+        System.out.println("Login: ");
+
+        System.out.println("Nom: ");
+        login.setnomutilisateur(userinput.nextLine());
+        System.out.println("Validation du nom: " + login.getnomutilisateur());
+
+        System.out.println("Password: ");
+        login.setpasswordutilisateur(userinput.nextLine());
+        System.out.println("Validation du password: " + login.getpasswordutilisateur());
+
         userinput.close();
 
         StockDao stockDao = new StockDao(url, user, password);
@@ -58,6 +82,9 @@ public class MainApp {
 
         ReservationDao reservationDao = new ReservationDao(url, user, password);
         reservationDao.saveReservation(reservation);
+
+        LoginDao LoginDao = new LoginDao(url, user, password);
+        LoginDao.saveLogin(login);
     }
 
 }
