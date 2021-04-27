@@ -50,8 +50,6 @@ public class Login extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        LoginLogo.setIcon(new javax.swing.ImageIcon("F:\\kylia\\Cours\\Projet JAVA\\src\\images\\logo_login.png")); // NOI18N
         getContentPane().add(LoginLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 680, 330));
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
@@ -78,7 +76,6 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 500, 570, 70));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("F:\\kylia\\Cours\\Projet JAVA\\src\\images\\LoginBouton.png")); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
@@ -90,7 +87,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 740, 290, 120));
         jButton1.setBorderPainted(false);
 
-        LoginBackground.setIcon(new javax.swing.ImageIcon("F:\\kylia\\Cours\\Projet JAVA\\src\\images\\fond.png")); // NOI18N
+        LoginBackground.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\fond.png")); // NOI18N
         getContentPane().add(LoginBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
 
         pack();
