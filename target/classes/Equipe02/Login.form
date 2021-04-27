@@ -30,11 +30,6 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="LoginLogo">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="F:\kylia\Cours\Projet JAVA\src\images\logo_login.png"/>
-        </Property>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="-40" y="0" width="680" height="330"/>
@@ -99,9 +94,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="F:\kylia\Cours\Projet JAVA\src\images\LoginBouton.png"/>
-        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
         </Property>
@@ -123,7 +115,7 @@
     <Component class="javax.swing.JLabel" name="LoginBackground">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="F:\kylia\Cours\Projet JAVA\src\images\fond.png"/>
+          <Image iconType="2" name="D:\Cours\Java\Miam-S-Paradise\src\images\fond.png"/>
         </Property>
       </Properties>
       <Constraints>
