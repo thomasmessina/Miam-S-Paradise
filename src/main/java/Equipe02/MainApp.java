@@ -1,5 +1,10 @@
 package Equipe02;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 import Equipe02.dao.StockDao;
@@ -74,6 +79,20 @@ public class MainApp {
         System.out.println("Password: ");
         login.setpasswordutilisateur(userinput.nextLine());
         System.out.println("Validation du password: " + login.getpasswordutilisateur());
+
+        System.out.println("----SALLE----");
+        try {
+            Connection connection = DriverManager.getConnection(url, user, password);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement
+                    .executeQuery("SELECT idtable, couvert FROM salle WHERE dispo NOT LIKE 'NON'");
+            while (resultSet.next()) {
+                System.out.println("Numero de table :" + resultSet.getInt("idtable"));
+                System.out.println("Nombre de couverts :" + resultSet.getInt("couvert"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         userinput.close();
 
