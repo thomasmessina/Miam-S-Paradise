@@ -1,5 +1,7 @@
 Equipe02\dao\StockDao.class
+Equipe02\dao\LoginDao.class
 Equipe02\models\Reservation.class
+Equipe02\models\Login.class
 Equipe02\dao\ReservationDao.class
 org\eclipse\wb\swing\FocusTraversalOnArray.class
 Equipe02\Login.class
