@@ -83,12 +83,22 @@ public class menus extends javax.swing.JFrame {
         btnsalle.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\sallebouton.png")); // NOI18N
         btnsalle.setBorder(null);
         btnsalle.setContentAreaFilled(false);
+        btnsalle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnsalleMouseClicked(evt);
+            }
+        });
         menus.add(btnsalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 560, -1, -1));
 
         btnstock.setBackground(new java.awt.Color(247, 244, 227));
         btnstock.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\stockbouton.png")); // NOI18N
         btnstock.setBorder(null);
         btnstock.setContentAreaFilled(false);
+        btnstock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnstockMouseClicked(evt);
+            }
+        });
         menus.add(btnstock, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 720, -1, -1));
 
         btndeco.setBackground(new java.awt.Color(247, 244, 227));
@@ -132,8 +142,19 @@ public class menus extends javax.swing.JFrame {
     }//GEN-LAST:event_btnmenuonActionPerformed
 
     private void btndecoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndecoMouseClicked
-    this.dispose();
+   // this.setVisible(false);
+   // new Login().setVisible(true);
     }//GEN-LAST:event_btndecoMouseClicked
+
+    private void btnsalleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalleMouseClicked
+        this.setVisible(false);
+        new gestionsalle().setVisible(true);
+    }//GEN-LAST:event_btnsalleMouseClicked
+
+    private void btnstockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnstockMouseClicked
+        this.setVisible(false);
+        new gestionstock().setVisible(true);
+    }//GEN-LAST:event_btnstockMouseClicked
 
     /**
      * @param args the command line arguments

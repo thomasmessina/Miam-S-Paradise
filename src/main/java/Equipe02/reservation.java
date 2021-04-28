@@ -31,8 +31,8 @@ public class reservation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        JScroll = new javax.swing.JScrollPane();
+        tablereserv = new javax.swing.JTable();
         reservationlabel = new javax.swing.JLabel();
         nbcouvlabel = new javax.swing.JLabel();
         nbtablelabel = new javax.swing.JLabel();
@@ -53,7 +53,7 @@ public class reservation extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btndeco = new javax.swing.JButton();
         fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,8 +67,8 @@ public class reservation extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablereserv.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        tablereserv.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -333,9 +333,10 @@ public class reservation extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable1);
+        tablereserv.setRowHeight(25);
+        JScroll.setViewportView(tablereserv);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(392, 240, 1420, 860));
+        getContentPane().add(JScroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 1420, 830));
 
         reservationlabel.setBackground(new java.awt.Color(51, 51, 51));
         reservationlabel.setFont(new java.awt.Font("Noto Sans", 0, 40)); // NOI18N
@@ -445,19 +446,34 @@ public class reservation extends javax.swing.JFrame {
         jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\sallebouton.png")); // NOI18N
         jButton3.setBorder(null);
         jButton3.setContentAreaFilled(false);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 560, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(247, 244, 227));
         jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\stockbouton.png")); // NOI18N
         jButton4.setBorder(null);
         jButton4.setContentAreaFilled(false);
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 720, -1, -1));
 
-        jButton5.setBackground(new java.awt.Color(247, 244, 227));
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\decobouton.png")); // NOI18N
-        jButton5.setBorder(null);
-        jButton5.setContentAreaFilled(false);
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 960, -1, -1));
+        btndeco.setBackground(new java.awt.Color(247, 244, 227));
+        btndeco.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\decobouton.png")); // NOI18N
+        btndeco.setBorder(null);
+        btndeco.setContentAreaFilled(false);
+        btndeco.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btndecoMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btndeco, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 960, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -490,6 +506,21 @@ public class reservation extends javax.swing.JFrame {
     this.setVisible(false);
         new menus().setVisible(true);
     }//GEN-LAST:event_btnmenusMouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        this.setVisible(false);
+        new gestionsalle().setVisible(true);
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        this.setVisible(false);
+        new gestionstock().setVisible(true);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void btndecoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndecoMouseClicked
+       // this.setVisible(false);
+       // new Login().setVisible(true);
+    }//GEN-LAST:event_btndecoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -527,6 +558,8 @@ public class reservation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JScrollPane JScroll;
+    public javax.swing.JButton btndeco;
     public javax.swing.JButton btnmenus;
     public javax.swing.JTextField date;
     public javax.swing.JLabel datelabel;
@@ -536,10 +569,7 @@ public class reservation extends javax.swing.JFrame {
     public javax.swing.JButton jButton1;
     public javax.swing.JButton jButton3;
     public javax.swing.JButton jButton4;
-    public javax.swing.JButton jButton5;
     public javax.swing.JPanel jPanel1;
-    public javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JTable jTable1;
     public javax.swing.JLabel logo;
     public javax.swing.JTextField nbcouverts;
     public javax.swing.JLabel nbcouvlabel;
@@ -551,5 +581,6 @@ public class reservation extends javax.swing.JFrame {
     public javax.swing.JButton reserver;
     public javax.swing.JTextField serveur;
     public javax.swing.JLabel serveurlabel;
+    public javax.swing.JTable tablereserv;
     // End of variables declaration//GEN-END:variables
 }
