@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 D:\Cours\Java\Miam-S-Paradise\src\main\java\org\eclipse\wb\swing\FocusTraversalOnArray.java
 D:\Cours\Java\Miam-S-Paradise\src\main\java\Equipe02\ActionEvent.java
 D:\Cours\Java\Miam-S-Paradise\src\main\java\Equipe02\Login.java
@@ -8,14 +7,3 @@ D:\Cours\Java\Miam-S-Paradise\src\main\java\Equipe02\dao\StockDao.java
 D:\Cours\Java\Miam-S-Paradise\src\main\java\Equipe02\dao\ReservationDao.java
 D:\Cours\Java\Miam-S-Paradise\src\main\java\Equipe02\App.java
 D:\Cours\Java\Miam-S-Paradise\src\main\java\Equipe02\models\Reservation.java
-=======
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\org\eclipse\wb\swing\FocusTraversalOnArray.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\models\Stock.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\dao\ReservationDao.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\Login.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\ActionEvent.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\App.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\dao\StockDao.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\MainApp.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\models\Reservation.java
->>>>>>> Stashed changes
