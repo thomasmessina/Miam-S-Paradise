@@ -16,6 +16,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 import org.xml.sax.Attributes;
+import Equipe02.dao.LoginDao;
 
 /**
  *
@@ -81,6 +82,7 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 500, 570, 70));
 
+        LoginButton.setIcon(new javax.swing.ImageIcon("F:\\kylia\\Cours\\Git kraken\\Miam-S-Paradise\\src\\main\\java\\Equipe02\\resources\\LoginBouton.png")); // NOI18N
         LoginButton.setBorder(null);
         LoginButton.setBorderPainted(false);
         LoginButton.setContentAreaFilled(false);
@@ -91,8 +93,6 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 740, 290, 120));
         LoginButton.setBorderPainted(false);
-
-        LoginBackground.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\fond.png")); // NOI18N
         getContentPane().add(LoginBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
 
         pack();
@@ -105,26 +105,31 @@ public class Login extends javax.swing.JFrame {
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
-
+    private String url;
+    private String username;
+    private String password;
+        
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         try{
             String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
-            String user = "194765";
+            String username = "194765";
             String password = "MiamSParadise";
-            Connection con = DriverManager.getConnection(url);
+            Connection connection = DriverManager.getConnection(url, username, password);
+
             String sql = "SELECT * from utilisateur WHERE nom_utilisateur=? AND password_utilisateur=?";
-            PreparedStatement pst = con.prepareStatement(sql);
+            PreparedStatement pst = connection.prepareStatement(sql);
             pst.setString(1, usernameField.getText());
-            pst.setString(1, passwordField.getText());
+            pst.setString(2, passwordField.getText());
             ResultSet rs = pst.executeQuery();
             if (rs.next()){
-                JOptionPane.showMessageDialog(null, "Username et password matched");
+                this.setVisible(false);
+                new menus().setVisible(true);
             }else{
                 JOptionPane.showMessageDialog(null, "Username ou password incorrect");
                 usernameField.setText("");
                 passwordField.setText("");
             }
-            con.close();
+            connection.close();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
         }
