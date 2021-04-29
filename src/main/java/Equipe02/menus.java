@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miamsparadise;
+package Equipe02;
 
 
 /**
@@ -53,12 +53,9 @@ public class menus extends javax.swing.JFrame {
         menus.setBackground(new java.awt.Color(247, 244, 227));
         menus.setPreferredSize(new java.awt.Dimension(284, 1080));
         menus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\LOGOMENUS.png")); // NOI18N
         menus.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 150));
 
         btnmenuon.setBackground(new java.awt.Color(247, 244, 227));
-        btnmenuon.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\BOUTONMENU.png")); // NOI18N
         btnmenuon.setBorder(null);
         btnmenuon.setContentAreaFilled(false);
         btnmenuon.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +66,6 @@ public class menus extends javax.swing.JFrame {
         menus.add(btnmenuon, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 225, -1, -1));
 
         btnreserv.setBackground(new java.awt.Color(247, 244, 227));
-        btnreserv.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\reservbouton.png")); // NOI18N
         btnreserv.setBorder(null);
         btnreserv.setContentAreaFilled(false);
         btnreserv.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,19 +76,16 @@ public class menus extends javax.swing.JFrame {
         menus.add(btnreserv, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 400, -1, -1));
 
         btnsalle.setBackground(new java.awt.Color(247, 244, 227));
-        btnsalle.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\sallebouton.png")); // NOI18N
         btnsalle.setBorder(null);
         btnsalle.setContentAreaFilled(false);
         menus.add(btnsalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 560, -1, -1));
 
         btnstock.setBackground(new java.awt.Color(247, 244, 227));
-        btnstock.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\stockbouton.png")); // NOI18N
         btnstock.setBorder(null);
         btnstock.setContentAreaFilled(false);
         menus.add(btnstock, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 720, -1, -1));
 
         btndeco.setBackground(new java.awt.Color(247, 244, 227));
-        btndeco.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\decobouton.png")); // NOI18N
         btndeco.setBorder(null);
         btndeco.setContentAreaFilled(false);
         btndeco.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -108,14 +101,8 @@ public class menus extends javax.swing.JFrame {
         titre.setFont(new java.awt.Font("Noto Sans", 0, 40)); // NOI18N
         titre.setText("Nos Menus");
         getContentPane().add(titre, new org.netbeans.lib.awtextra.AbsoluteConstraints(314, 32, -1, -1));
-
-        menu2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\menu2.png")); // NOI18N
         getContentPane().add(menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1201, 135, -1, -1));
-
-        menu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\menu1.png")); // NOI18N
         getContentPane().add(menu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 135, -1, -1));
-
-        fond.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\fond.png")); // NOI18N
         getContentPane().add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
