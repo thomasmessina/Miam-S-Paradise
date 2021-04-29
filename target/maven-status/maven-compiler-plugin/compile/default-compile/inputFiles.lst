@@ -1,11 +1,29 @@
+<<<<<<< Updated upstream
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\dao\LoginDao.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\reservation.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\dao\StockDao.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\ActionEvent.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\App.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\Login.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\models\Login.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\org\eclipse\wb\swing\FocusTraversalOnArray.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\models\Reservation.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\MainApp.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\dao\ReservationDao.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\models\Stock.java
+C:\Users\Ruban\OneDrive\Bureau\clone miams paradise\Miam-S-Paradise\src\main\java\Equipe02\menus.java
+=======
+F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\models\Stock.java
+F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\models\Login.java
+F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\reservation.java
+F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\menus.java
+F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\dao\StockDao.java
+F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\MainApp.java
 F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\dao\LoginDao.java
 F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\org\eclipse\wb\swing\FocusTraversalOnArray.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\models\Stock.java
 F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\dao\ReservationDao.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\models\Login.java
 F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\Login.java
 F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\ActionEvent.java
 F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\App.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\dao\StockDao.java
-F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\MainApp.java
 F:\kylia\Cours\Git kraken\Miam-S-Paradise\src\main\java\Equipe02\models\Reservation.java
+>>>>>>> Stashed changes
