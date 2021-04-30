@@ -1,14 +1,11 @@
 package Equipe02.models;
 
-public class Reservation {
+public class ReservationModel {
     private Long idreservation;
     private String date;
     private String heure;
     private String nom_client;
     private Long table_idtable;
-
-    public Reservation() {
-    }
 
     public Long getIdreservation() {
         return idreservation;

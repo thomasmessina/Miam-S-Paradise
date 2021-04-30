@@ -56,6 +56,8 @@ public class Login extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LoginLogo.setIcon(new javax.swing.ImageIcon("F:\\kylia\\Cours\\Git kraken\\Miam-S-Paradise\\src\\main\\java\\Equipe02\\resources\\LogoLogin.png")); // NOI18N
         getContentPane().add(LoginLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 680, 330));
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N

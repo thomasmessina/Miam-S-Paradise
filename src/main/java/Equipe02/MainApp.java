@@ -6,7 +6,8 @@ import Equipe02.dao.StockDao;
 import Equipe02.models.Stock;
 
 import Equipe02.dao.ReservationDao;
-import Equipe02.models.Reservation;
+import Equipe02.models.ReservationModel;
+import Equipe02.Reservation;
 
 import Equipe02.dao.LoginDao;
 import Equipe02.models.Login;
@@ -39,7 +40,7 @@ public class MainApp {
         stock.setQuantite(userinput.nextLine());
         System.out.println("Validation du stock: " + stock.getQuantite());
 
-        Reservation reservation = new Reservation();
+        ReservationModel reservation = new ReservationModel();
         System.out.println("Reservation: ");
 
         System.out.println("Date: ");

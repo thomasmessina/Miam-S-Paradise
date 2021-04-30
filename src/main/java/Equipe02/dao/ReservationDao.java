@@ -5,8 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import Equipe02.Reservation;
 
-import Equipe02.models.Reservation;
+
+import Equipe02.models.ReservationModel;
 
 public class ReservationDao {
 
@@ -20,9 +22,10 @@ public class ReservationDao {
         this.password = password;
     }
 
-    public void saveReservation(Reservation reservation) {
+    public void saveReservation(ReservationModel reservation) {
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
+            System.out.println(reservation.getNomClient());
 
             if (reservation.getIdreservation() != null) {
                 PreparedStatement statement = connection.prepareStatement(
@@ -37,7 +40,7 @@ public class ReservationDao {
                 statement.execute();
             } else {
                 PreparedStatement statement = connection
-                        .prepareStatement("insert into reservation (date, heure, nom_client) values (?, ?, ?);");
+                .prepareStatement("insert into reservation (date, heure, nom_client) values (?, ?, ?);");
                 statement.setString(1, reservation.getDate());
                 statement.setString(2, reservation.getHeure());
                 statement.setString(3, reservation.getNomClient());
@@ -52,7 +55,7 @@ public class ReservationDao {
         }
     }
 
-    public Reservation getReservationById(Long idreservation) {
+    public ReservationModel getReservationById(Long idreservation) {
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
             PreparedStatement statement = connection
@@ -61,7 +64,7 @@ public class ReservationDao {
 
             ResultSet resultSet = statement.executeQuery();
 
-            Reservation reservation = new Reservation();
+            ReservationModel reservation = new ReservationModel();
 
             while (resultSet.next()) {
                 reservation.setIdreservation(resultSet.getLong("idreservation"));

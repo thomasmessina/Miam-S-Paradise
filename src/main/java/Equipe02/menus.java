@@ -111,7 +111,7 @@ public class menus extends javax.swing.JFrame {
     private void btnreservMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservMouseClicked
 
      this.setVisible(false);
-        new reservation().setVisible(true);
+        new Reservation().setVisible(true);
     }//GEN-LAST:event_btnreservMouseClicked
 
     private void btnmenuonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuonActionPerformed

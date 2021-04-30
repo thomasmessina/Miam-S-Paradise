@@ -5,20 +5,30 @@
  */
 package Equipe02;
 
+//import Equipe02.dao.ReservationDao;
+import Equipe02.dao.ReservationDao;
+import Equipe02.models.ReservationModel;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author Ruban
  */
-public class reservation extends javax.swing.JFrame {
+public class Reservation extends javax.swing.JFrame {
+
 
     /**
      * Creates new form reservation
      */
-    public reservation() {
-         this.setUndecorated(true);      
+    public Reservation() {
+         //this.setUndecorated(true);      
         initComponents();
     }
 
@@ -390,7 +400,7 @@ public class reservation extends javax.swing.JFrame {
         getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 152, 186, 45));
 
         reserver.setBackground(new java.awt.Color(247, 244, 227));
-        reserver.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\btnreserv.png")); // NOI18N
+        reserver.setIcon(new javax.swing.ImageIcon("F:\\kylia\\Cours\\Git kraken\\Miam-S-Paradise\\src\\images\\btnreserv.png")); // NOI18N
         reserver.setBorder(null);
         reserver.setContentAreaFilled(false);
         reserver.addActionListener(new java.awt.event.ActionListener() {
@@ -398,7 +408,7 @@ public class reservation extends javax.swing.JFrame {
                 reserverActionPerformed(evt);
             }
         });
-        getContentPane().add(reserver, new org.netbeans.lib.awtextra.AbsoluteConstraints(1686, 152, -1, -1));
+        getContentPane().add(reserver, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 140, 180, 60));
 
         nbcouverts.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
         nbcouverts.setPreferredSize(new java.awt.Dimension(186, 45));
@@ -415,12 +425,9 @@ public class reservation extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(247, 244, 227));
         jPanel1.setPreferredSize(new java.awt.Dimension(284, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\LOGOMENUS.png")); // NOI18N
         jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 150));
 
         btnmenus.setBackground(new java.awt.Color(247, 244, 227));
-        btnmenus.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\Menus.png")); // NOI18N
         btnmenus.setBorder(null);
         btnmenus.setContentAreaFilled(false);
         btnmenus.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -436,25 +443,21 @@ public class reservation extends javax.swing.JFrame {
         jPanel1.add(btnmenus, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 225, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(247, 244, 227));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\reservationblanc.png")); // NOI18N
         jButton1.setBorder(null);
         jButton1.setContentAreaFilled(false);
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 400, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(247, 244, 227));
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\sallebouton.png")); // NOI18N
         jButton3.setBorder(null);
         jButton3.setContentAreaFilled(false);
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 560, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(247, 244, 227));
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\stockbouton.png")); // NOI18N
         jButton4.setBorder(null);
         jButton4.setContentAreaFilled(false);
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 720, -1, -1));
 
         jButton5.setBackground(new java.awt.Color(247, 244, 227));
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\decobouton.png")); // NOI18N
         jButton5.setBorder(null);
         jButton5.setContentAreaFilled(false);
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 960, -1, -1));
@@ -462,7 +465,6 @@ public class reservation extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         fond.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        fond.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruban\\OneDrive\\Bureau\\fond.png")); // NOI18N
         getContentPane().add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getAccessibleContext().setAccessibleName("reservationframe");
@@ -473,11 +475,32 @@ public class reservation extends javax.swing.JFrame {
     private void none(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_none
         // TODO add your handling code here:
     }//GEN-LAST:event_none
-
+    
+    private String url;
+    private String username;
+    private String password;
+    
     private void reserverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reserverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reserverActionPerformed
 
+    try{
+        String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
+        String username = "194765";
+        String password = "MiamSParadise";
+        Connection connection = DriverManager.getConnection(url, username, password);
+        
+    
+           
+        ReservationModel reservation = new ReservationModel();
+        reservation.setNomClient(nom.getText());
+        ReservationDao reservationDao = new ReservationDao(url, username, password);
+        reservationDao.saveReservation(reservation);
+        
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+ 
+    }//GEN-LAST:event_reserverActionPerformed
     private void nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomActionPerformed
@@ -508,20 +531,21 @@ public class reservation extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(reservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Reservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(reservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Reservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(reservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Reservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(reservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Reservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new reservation().setVisible(true);
+                new Reservation().setVisible(true);
             }
         });
     }
