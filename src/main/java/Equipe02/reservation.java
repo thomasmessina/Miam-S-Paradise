@@ -8,9 +8,11 @@ package Equipe02;
 //import Equipe02.dao.ReservationDao;
 import Equipe02.dao.ReservationDao;
 import Equipe02.models.ReservationModel;
+import com.mysql.cj.xdevapi.Table;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -42,7 +44,7 @@ public class Reservation extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TableReservation = new javax.swing.JTable();
         reservationlabel = new javax.swing.JLabel();
         nbcouvlabel = new javax.swing.JLabel();
         nbtablelabel = new javax.swing.JLabel();
@@ -77,8 +79,8 @@ public class Reservation extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TableReservation.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        TableReservation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -343,7 +345,7 @@ public class Reservation extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(TableReservation);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(392, 240, 1420, 860));
 
@@ -471,14 +473,35 @@ public class Reservation extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void none(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_none
-        // TODO add your handling code here:
-    }//GEN-LAST:event_none
     
     private String url;
     private String username;
     private String password;
+    
+    Connection connection=null;
+    ResultSet rs = null;
+    PreparedStatement ps = null;
+    public void AffichageTableReservation(){
+        try{
+            String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
+            String username = "194765";
+            String password = "MiamSParadise";
+            Connection connection = DriverManager.getConnection(url, username, password);
+            
+            String reqAffichageTable = "SELECT * from reservation";
+            ps = connection.prepareStatement(reqAffichageTable);
+            rs=ps.executeQuery();
+            Table.setModel(DbUtilS.resultSetToTableModel(rs));
+        
+        }catch(Exception e){
+            System.out.println(e );
+        }
+    }
+    
+    private void none(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_none
+        // TODO add your handling code here:
+    }//GEN-LAST:event_none
+    
     
     private void reserverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reserverActionPerformed
 
@@ -492,6 +515,13 @@ public class Reservation extends javax.swing.JFrame {
            
         ReservationModel reservation = new ReservationModel();
         reservation.setNomClient(nom.getText());
+        reservation.setNomClient(serveur.getText());
+        reservation.setDate(date.getText());
+        reservation.setHeure(heure.getText());
+        reservation.setNomClient(ntable.getText());
+        reservation.setNomClient(nbcouverts.getText());
+
+
         ReservationDao reservationDao = new ReservationDao(url, username, password);
         reservationDao.saveReservation(reservation);
         
@@ -551,6 +581,7 @@ public class Reservation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTable TableReservation;
     public javax.swing.JButton btnmenus;
     public javax.swing.JTextField date;
     public javax.swing.JLabel datelabel;
@@ -563,7 +594,6 @@ public class Reservation extends javax.swing.JFrame {
     public javax.swing.JButton jButton5;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JTable jTable1;
     public javax.swing.JLabel logo;
     public javax.swing.JTextField nbcouverts;
     public javax.swing.JLabel nbcouvlabel;
