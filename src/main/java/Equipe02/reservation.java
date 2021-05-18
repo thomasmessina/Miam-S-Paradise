@@ -22,19 +22,20 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 
-
 /**
  *
  * @author Ruban
  */
 public class Reservation extends javax.swing.JFrame {
 
+    private Object id = 1;
+
 
     /**
      * Creates new form reservation
      */
     public Reservation() {
-         //this.setUndecorated(true);      
+        this.setUndecorated(true);      
         initComponents();
     }
 
@@ -61,14 +62,16 @@ public class Reservation extends javax.swing.JFrame {
         nbcouverts = new javax.swing.JTextField();
         ntable = new javax.swing.JTextField();
         heure = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
-        btnmenus = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         fond = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        menus = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
+        btnmenuon = new javax.swing.JButton();
+        btnreserv = new javax.swing.JButton();
+        btnsalle = new javax.swing.JButton();
+        btnstock = new javax.swing.JButton();
+        btndeco = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1920, 1080));
@@ -141,7 +144,7 @@ public class Reservation extends javax.swing.JFrame {
                 reserverActionPerformed(evt);
             }
         });
-        getContentPane().add(reserver, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 140, 180, 60));
+        getContentPane().add(reserver, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 140, 180, 60));
 
         nbcouverts.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
         nbcouverts.setPreferredSize(new java.awt.Dimension(186, 45));
@@ -155,50 +158,119 @@ public class Reservation extends javax.swing.JFrame {
         heure.setPreferredSize(new java.awt.Dimension(186, 45));
         getContentPane().add(heure, new org.netbeans.lib.awtextra.AbsoluteConstraints(1023, 152, 186, 45));
 
-        jPanel1.setBackground(new java.awt.Color(247, 244, 227));
-        jPanel1.setPreferredSize(new java.awt.Dimension(284, 1080));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 150));
-
-        btnmenus.setBackground(new java.awt.Color(247, 244, 227));
-        btnmenus.setBorder(null);
-        btnmenus.setContentAreaFilled(false);
-        btnmenus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnmenusMouseClicked(evt);
-            }
-        });
-        btnmenus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                none(evt);
-            }
-        });
-        jPanel1.add(btnmenus, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 225, -1, -1));
-
-        jButton1.setBackground(new java.awt.Color(247, 244, 227));
-        jButton1.setBorder(null);
-        jButton1.setContentAreaFilled(false);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 400, -1, -1));
-
-        jButton3.setBackground(new java.awt.Color(247, 244, 227));
-        jButton3.setBorder(null);
-        jButton3.setContentAreaFilled(false);
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 560, -1, -1));
-
-        jButton4.setBackground(new java.awt.Color(247, 244, 227));
-        jButton4.setBorder(null);
-        jButton4.setContentAreaFilled(false);
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 720, -1, -1));
-
-        jButton5.setBackground(new java.awt.Color(247, 244, 227));
-        jButton5.setBorder(null);
-        jButton5.setContentAreaFilled(false);
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 960, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
         fond.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
         getContentPane().add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, nom.getText(), null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Id réservation", "Date", "Heure", "Nom client"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, -1, -1));
+
+        menus.setBackground(new java.awt.Color(247, 244, 227));
+        menus.setPreferredSize(new java.awt.Dimension(284, 1080));
+
+        logo.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\LOGOMENUS.png")); // NOI18N
+
+        btnmenuon.setBackground(new java.awt.Color(247, 244, 227));
+        btnmenuon.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\Menus.png")); // NOI18N
+        btnmenuon.setBorder(null);
+        btnmenuon.setContentAreaFilled(false);
+        btnmenuon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmenuonActionPerformed(evt);
+            }
+        });
+
+        btnreserv.setBackground(new java.awt.Color(247, 244, 227));
+        btnreserv.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\reservbouton.png")); // NOI18N
+        btnreserv.setBorder(null);
+        btnreserv.setContentAreaFilled(false);
+        btnreserv.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnreservMouseClicked(evt);
+            }
+        });
+        btnreserv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnreservActionPerformed(evt);
+            }
+        });
+
+        btnsalle.setBackground(new java.awt.Color(247, 244, 227));
+        btnsalle.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\sallebouton.png")); // NOI18N
+        btnsalle.setBorder(null);
+        btnsalle.setContentAreaFilled(false);
+        btnsalle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalleActionPerformed(evt);
+            }
+        });
+
+        btnstock.setBackground(new java.awt.Color(247, 244, 227));
+        btnstock.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\stockbouton.png")); // NOI18N
+        btnstock.setBorder(null);
+        btnstock.setContentAreaFilled(false);
+        btnstock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnstockActionPerformed(evt);
+            }
+        });
+
+        btndeco.setBackground(new java.awt.Color(247, 244, 227));
+        btndeco.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\decobtn2.png")); // NOI18N
+        btndeco.setBorder(null);
+        btndeco.setContentAreaFilled(false);
+        btndeco.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btndecoMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout menusLayout = new javax.swing.GroupLayout(menus);
+        menus.setLayout(menusLayout);
+        menusLayout.setHorizontalGroup(
+            menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menusLayout.createSequentialGroup()
+                .addComponent(logo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(menusLayout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addGroup(menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnmenuon)
+                    .addComponent(btnreserv)
+                    .addComponent(btnsalle)
+                    .addComponent(btnstock)
+                    .addComponent(btndeco))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        menusLayout.setVerticalGroup(
+            menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menusLayout.createSequentialGroup()
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnmenuon)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnreserv)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnsalle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnstock)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btndeco)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(menus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getAccessibleContext().setAccessibleName("reservationframe");
 
@@ -209,11 +281,7 @@ public class Reservation extends javax.swing.JFrame {
     private String username;
     private String password;
 
-    
-    private void none(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_none
-        // TODO add your handling code here:
-    }//GEN-LAST:event_none
-    
+        
     
     private void reserverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reserverActionPerformed
 
@@ -251,10 +319,35 @@ public class Reservation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formComponentAdded
 
-    private void btnmenusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmenusMouseClicked
-    this.setVisible(false);
-        new menus().setVisible(true);
-    }//GEN-LAST:event_btnmenusMouseClicked
+    private void btnmenuonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuonActionPerformed
+        this.setVisible(false);
+        new menus().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnmenuonActionPerformed
+
+    private void btnreservMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservMouseClicked
+
+        this.setVisible(false);
+        new Reservation().setVisible(true);
+    }//GEN-LAST:event_btnreservMouseClicked
+
+    private void btnreservActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreservActionPerformed
+        this.setVisible(false);
+        new Reservation().setVisible(true);           // TODO add your handling code here:
+    }//GEN-LAST:event_btnreservActionPerformed
+
+    private void btnsalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalleActionPerformed
+        this.setVisible(false);
+        new gestionsalle().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_btnsalleActionPerformed
+
+    private void btnstockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstockActionPerformed
+        this.setVisible(false);
+        new gestionstock().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnstockActionPerformed
+
+    private void btndecoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndecoMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_btndecoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -283,54 +376,7 @@ public class Reservation extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        try 
-  {
-      String url = "jdbc:mysql://mysql-thomas-messina.alwaysdata.net:3306/thomas-messina_miamsparadise";
-      String user = "194765";
-      String password = "MiamSParadise";
-    
-      Connection con = DriverManager.getConnection(url, user, password);
-    
-      String query = "SELECT * FROM reservation";
-    
-      Statement stm = con.createStatement();
-      ResultSet res = stm.executeQuery(query);
-    
-      String columns[] = { "idreservation", "date", "heure", "nom_client", "table_idtable" };
-      String data[][] = new String[8][5];
-    
-      int i = 0;
-      while (res.next()) {
-        int id = res.getInt("idreservation");
-        String date = res.getString("date");
-        String heure = res.getString("heure");
-        String nom_client = res.getString("nom_client");
-        String table_idtable = res.getString("table_idtable");
-        data[i][0] = id + "";
-        data[i][1] = date;
-        data[i][2] = heure;
-        data[i][3] = nom_client;
-        data[i][4] = table_idtable;
-        i++;
-      }
-    
-      DefaultTableModel model = new DefaultTableModel(data, columns);
-      JTable table = new JTable(model);
-      table.setShowGrid(true);
-      table.setShowVerticalLines(true);
-      JScrollPane pane = new JScrollPane(table);
-      JFrame f = new JFrame("Remplir JTable a partir d'une BDD");
-      JPanel panel = new JPanel();
-      panel.add(pane);
-      f.add(panel);
-      f.setSize(500, 250);
-      f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      f.setVisible(true);
       
-    
-    } catch(SQLException e) {
-      e.printStackTrace();
-    }
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -341,18 +387,20 @@ public class Reservation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnmenus;
+    public javax.swing.JButton btndeco;
+    public javax.swing.JButton btnmenuon;
+    public javax.swing.JButton btnreserv;
+    public javax.swing.JButton btnsalle;
+    public javax.swing.JButton btnstock;
     public javax.swing.JTextField date;
     public javax.swing.JLabel datelabel;
     public javax.swing.JLabel fond;
     public javax.swing.JTextField heure;
     public javax.swing.JLabel heurelabel;
-    public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JButton jButton4;
-    public javax.swing.JButton jButton5;
-    public javax.swing.JPanel jPanel1;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable jTable1;
     public javax.swing.JLabel logo;
+    public javax.swing.JPanel menus;
     public javax.swing.JTextField nbcouverts;
     public javax.swing.JLabel nbcouvlabel;
     public javax.swing.JLabel nbtablelabel;
