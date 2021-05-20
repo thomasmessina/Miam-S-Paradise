@@ -35,7 +35,8 @@ public class Reservation extends javax.swing.JFrame {
      * Creates new form reservation
      */
     public Reservation() {
-        this.setUndecorated(true);      
+        this.setUndecorated(true);
+        this.setVisible(true);
         initComponents();
     }
 
@@ -48,6 +49,14 @@ public class Reservation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        menus = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
+        btnmenuon = new javax.swing.JButton();
+        btnreserv = new javax.swing.JButton();
+        btnsalle = new javax.swing.JButton();
+        btnstock = new javax.swing.JButton();
+        btndeco = new javax.swing.JButton();
+        mainPanelReservation = new javax.swing.JPanel();
         reservationlabel = new javax.swing.JLabel();
         nbcouvlabel = new javax.swing.JLabel();
         nbtablelabel = new javax.swing.JLabel();
@@ -62,16 +71,6 @@ public class Reservation extends javax.swing.JFrame {
         nbcouverts = new javax.swing.JTextField();
         ntable = new javax.swing.JTextField();
         heure = new javax.swing.JTextField();
-        fond = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        menus = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
-        btnmenuon = new javax.swing.JButton();
-        btnreserv = new javax.swing.JButton();
-        btnsalle = new javax.swing.JButton();
-        btnstock = new javax.swing.JButton();
-        btndeco = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1920, 1080));
@@ -82,101 +81,8 @@ public class Reservation extends javax.swing.JFrame {
                 formComponentAdded(evt);
             }
         });
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        reservationlabel.setBackground(new java.awt.Color(51, 51, 51));
-        reservationlabel.setFont(new java.awt.Font("Noto Sans", 0, 40)); // NOI18N
-        reservationlabel.setText("Réservation");
-        getContentPane().add(reservationlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(314, 32, -1, -1));
-
-        nbcouvlabel.setBackground(new java.awt.Color(51, 51, 51));
-        nbcouvlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        nbcouvlabel.setText("Nombre de couverts");
-        getContentPane().add(nbcouvlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1458, 113, -1, -1));
-
-        nbtablelabel.setBackground(new java.awt.Color(51, 51, 51));
-        nbtablelabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        nbtablelabel.setText("Numéro table");
-        getContentPane().add(nbtablelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1269, 113, -1, -1));
-
-        heurelabel.setBackground(new java.awt.Color(51, 51, 51));
-        heurelabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        heurelabel.setText("Heure");
-        getContentPane().add(heurelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1084, 113, -1, -1));
-
-        datelabel.setBackground(new java.awt.Color(51, 51, 51));
-        datelabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        datelabel.setText("Date");
-        getContentPane().add(datelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(863, 113, -1, -1));
-
-        serveurlabel.setBackground(new java.awt.Color(51, 51, 51));
-        serveurlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        serveurlabel.setText("Serveur");
-        getContentPane().add(serveurlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(635, 113, -1, -1));
-
-        nomlabel.setBackground(new java.awt.Color(51, 51, 51));
-        nomlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        nomlabel.setText("Nom client");
-        getContentPane().add(nomlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 113, -1, -1));
-
-        serveur.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        serveur.setPreferredSize(new java.awt.Dimension(186, 45));
-        getContentPane().add(serveur, new org.netbeans.lib.awtextra.AbsoluteConstraints(581, 152, 186, 45));
-
-        nom.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        nom.setPreferredSize(new java.awt.Dimension(186, 45));
-        nom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 152, 186, 45));
-
-        date.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        date.setPreferredSize(new java.awt.Dimension(186, 45));
-        getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 152, 186, 45));
-
-        reserver.setBackground(new java.awt.Color(247, 244, 227));
-        reserver.setBorder(null);
-        reserver.setContentAreaFilled(false);
-        reserver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reserverActionPerformed(evt);
-            }
-        });
-        getContentPane().add(reserver, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 140, 180, 60));
-
-        nbcouverts.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        nbcouverts.setPreferredSize(new java.awt.Dimension(186, 45));
-        getContentPane().add(nbcouverts, new org.netbeans.lib.awtextra.AbsoluteConstraints(1465, 152, 186, 45));
-
-        ntable.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        ntable.setPreferredSize(new java.awt.Dimension(186, 45));
-        getContentPane().add(ntable, new org.netbeans.lib.awtextra.AbsoluteConstraints(1244, 152, 186, 45));
-
-        heure.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        heure.setPreferredSize(new java.awt.Dimension(186, 45));
-        getContentPane().add(heure, new org.netbeans.lib.awtextra.AbsoluteConstraints(1023, 152, 186, 45));
-
-        fond.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        getContentPane().add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, nom.getText(), null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Id réservation", "Date", "Heure", "Nom client"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, -1, -1));
-
-        menus.setBackground(new java.awt.Color(247, 244, 227));
+        menus.setBackground(new java.awt.Color(247, 244, 220));
         menus.setPreferredSize(new java.awt.Dimension(284, 1080));
 
         logo.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\LOGOMENUS.png")); // NOI18N
@@ -185,6 +91,11 @@ public class Reservation extends javax.swing.JFrame {
         btnmenuon.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\Menus.png")); // NOI18N
         btnmenuon.setBorder(null);
         btnmenuon.setContentAreaFilled(false);
+        btnmenuon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnmenuonMouseClicked(evt);
+            }
+        });
         btnmenuon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnmenuonActionPerformed(evt);
@@ -210,6 +121,11 @@ public class Reservation extends javax.swing.JFrame {
         btnsalle.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\sallebouton.png")); // NOI18N
         btnsalle.setBorder(null);
         btnsalle.setContentAreaFilled(false);
+        btnsalle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnsalleMouseClicked(evt);
+            }
+        });
         btnsalle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsalleActionPerformed(evt);
@@ -220,6 +136,11 @@ public class Reservation extends javax.swing.JFrame {
         btnstock.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\stockbouton.png")); // NOI18N
         btnstock.setBorder(null);
         btnstock.setContentAreaFilled(false);
+        btnstock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnstockMouseClicked(evt);
+            }
+        });
         btnstock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnstockActionPerformed(evt);
@@ -233,6 +154,11 @@ public class Reservation extends javax.swing.JFrame {
         btndeco.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btndecoMouseClicked(evt);
+            }
+        });
+        btndeco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndecoActionPerformed(evt);
             }
         });
 
@@ -267,10 +193,167 @@ public class Reservation extends javax.swing.JFrame {
                 .addComponent(btnstock)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btndeco)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(373, Short.MAX_VALUE))
         );
 
-        getContentPane().add(menus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        mainPanelReservation.setBackground(new java.awt.Color(247, 244, 227));
+
+        reservationlabel.setBackground(new java.awt.Color(51, 51, 51));
+        reservationlabel.setFont(new java.awt.Font("Noto Sans", 0, 40)); // NOI18N
+        reservationlabel.setText("Réservation");
+
+        nbcouvlabel.setBackground(new java.awt.Color(51, 51, 51));
+        nbcouvlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        nbcouvlabel.setText("Nombre de couverts");
+
+        nbtablelabel.setBackground(new java.awt.Color(51, 51, 51));
+        nbtablelabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        nbtablelabel.setText("Numéro table");
+
+        heurelabel.setBackground(new java.awt.Color(51, 51, 51));
+        heurelabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        heurelabel.setText("Heure");
+
+        datelabel.setBackground(new java.awt.Color(51, 51, 51));
+        datelabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        datelabel.setText("Date");
+
+        serveurlabel.setBackground(new java.awt.Color(51, 51, 51));
+        serveurlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        serveurlabel.setText("Serveur");
+
+        nomlabel.setBackground(new java.awt.Color(51, 51, 51));
+        nomlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        nomlabel.setText("Nom client");
+
+        serveur.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        serveur.setPreferredSize(new java.awt.Dimension(186, 45));
+
+        nom.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        nom.setPreferredSize(new java.awt.Dimension(186, 45));
+        nom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomActionPerformed(evt);
+            }
+        });
+
+        date.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        date.setPreferredSize(new java.awt.Dimension(186, 45));
+
+        reserver.setBackground(new java.awt.Color(247, 244, 227));
+        reserver.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\btnreserv.png")); // NOI18N
+        reserver.setBorder(null);
+        reserver.setContentAreaFilled(false);
+        reserver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reserverActionPerformed(evt);
+            }
+        });
+
+        nbcouverts.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        nbcouverts.setPreferredSize(new java.awt.Dimension(186, 45));
+
+        ntable.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        ntable.setPreferredSize(new java.awt.Dimension(186, 45));
+
+        heure.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        heure.setPreferredSize(new java.awt.Dimension(186, 45));
+
+        javax.swing.GroupLayout mainPanelReservationLayout = new javax.swing.GroupLayout(mainPanelReservation);
+        mainPanelReservation.setLayout(mainPanelReservationLayout);
+        mainPanelReservationLayout.setHorizontalGroup(
+            mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanelReservationLayout.createSequentialGroup()
+                .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanelReservationLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(nomlabel)
+                        .addGap(141, 141, 141)
+                        .addComponent(serveurlabel)
+                        .addGap(170, 170, 170)
+                        .addComponent(datelabel))
+                    .addGroup(mainPanelReservationLayout.createSequentialGroup()
+                        .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(mainPanelReservationLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(heure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ntable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mainPanelReservationLayout.createSequentialGroup()
+                                .addGap(67, 67, 67)
+                                .addComponent(heurelabel)
+                                .addGap(150, 150, 150)
+                                .addComponent(nbtablelabel))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mainPanelReservationLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42)
+                                .addComponent(serveur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(42, 42, 42)
+                        .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mainPanelReservationLayout.createSequentialGroup()
+                                .addComponent(nbcouverts, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(54, 54, 54)
+                                .addComponent(reserver, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nbcouvlabel))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mainPanelReservationLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(reservationlabel)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        mainPanelReservationLayout.setVerticalGroup(
+            mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanelReservationLayout.createSequentialGroup()
+                .addGap(93, 93, 93)
+                .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomlabel)
+                    .addComponent(serveurlabel)
+                    .addComponent(datelabel))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(serveur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
+                .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(heurelabel)
+                    .addComponent(nbtablelabel)
+                    .addComponent(nbcouvlabel))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(heure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ntable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nbcouverts, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(reserver, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(mainPanelReservationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mainPanelReservationLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(reservationlabel)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(menus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(mainPanelReservation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(mainPanelReservation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(menus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         getAccessibleContext().setAccessibleName("reservationframe");
 
@@ -319,35 +402,50 @@ public class Reservation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formComponentAdded
 
-    private void btnmenuonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuonActionPerformed
+    private void btndecoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndecoMouseClicked
         this.setVisible(false);
-        new menus().setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnmenuonActionPerformed
+        new Login().setVisible(true);
+    }//GEN-LAST:event_btndecoMouseClicked
+
+    private void btnstockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstockActionPerformed
+            // TODO add your handling code here:
+    }//GEN-LAST:event_btnstockActionPerformed
+
+    private void btnsalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnsalleActionPerformed
+
+    private void btnreservActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreservActionPerformed
+                   // TODO add your handling code here:
+    }//GEN-LAST:event_btnreservActionPerformed
 
     private void btnreservMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservMouseClicked
-
         this.setVisible(false);
         new Reservation().setVisible(true);
     }//GEN-LAST:event_btnreservMouseClicked
 
-    private void btnreservActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreservActionPerformed
-        this.setVisible(false);
-        new Reservation().setVisible(true);           // TODO add your handling code here:
-    }//GEN-LAST:event_btnreservActionPerformed
+    private void btnmenuonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuonActionPerformed
+              // TODO add your handling code here:
+    }//GEN-LAST:event_btnmenuonActionPerformed
 
-    private void btnsalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalleActionPerformed
+    private void btndecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndecoActionPerformed
+        
+    }//GEN-LAST:event_btndecoActionPerformed
+
+    private void btnstockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnstockMouseClicked
+        this.setVisible(false);
+        new gestionstock().setVisible(true);            // TODO add your handling code here:
+    }//GEN-LAST:event_btnstockMouseClicked
+
+    private void btnsalleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalleMouseClicked
         this.setVisible(false);
         new gestionsalle().setVisible(true);// TODO add your handling code here:
-    }//GEN-LAST:event_btnsalleActionPerformed
+    }//GEN-LAST:event_btnsalleMouseClicked
 
-    private void btnstockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstockActionPerformed
+    private void btnmenuonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmenuonMouseClicked
         this.setVisible(false);
-        new gestionstock().setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnstockActionPerformed
-
-    private void btndecoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndecoMouseClicked
-        this.dispose();
-    }//GEN-LAST:event_btndecoMouseClicked
+        new menus().setVisible(true);          // TODO add your handling code here:
+    }//GEN-LAST:event_btnmenuonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -394,12 +492,10 @@ public class Reservation extends javax.swing.JFrame {
     public javax.swing.JButton btnstock;
     public javax.swing.JTextField date;
     public javax.swing.JLabel datelabel;
-    public javax.swing.JLabel fond;
     public javax.swing.JTextField heure;
     public javax.swing.JLabel heurelabel;
-    public javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jTable1;
     public javax.swing.JLabel logo;
+    public javax.swing.JPanel mainPanelReservation;
     public javax.swing.JPanel menus;
     public javax.swing.JTextField nbcouverts;
     public javax.swing.JLabel nbcouvlabel;

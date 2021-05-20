@@ -19,7 +19,8 @@ public class menus extends javax.swing.JFrame {
      * Creates new form menus
      */
     public menus() {
-        this.setUndecorated(true);
+        this.setUndecorated(true);      
+        this.setVisible(true);
         initComponents();
     }
 
@@ -60,11 +61,10 @@ public class menus extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(247, 244, 227));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMinimumSize(new java.awt.Dimension(0, 0));
-        setPreferredSize(new java.awt.Dimension(1234, 668));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
         setSize(new java.awt.Dimension(0, 0));
 
-        menus.setBackground(new java.awt.Color(247, 244, 227));
+        menus.setBackground(new java.awt.Color(247, 244, 220));
         menus.setPreferredSize(new java.awt.Dimension(284, 1080));
 
         logo.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\LOGOMENUS.png")); // NOI18N
@@ -73,6 +73,11 @@ public class menus extends javax.swing.JFrame {
         btnmenuon.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\Menus.png")); // NOI18N
         btnmenuon.setBorder(null);
         btnmenuon.setContentAreaFilled(false);
+        btnmenuon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnmenuonMouseClicked(evt);
+            }
+        });
         btnmenuon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnmenuonActionPerformed(evt);
@@ -98,6 +103,11 @@ public class menus extends javax.swing.JFrame {
         btnsalle.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\sallebouton.png")); // NOI18N
         btnsalle.setBorder(null);
         btnsalle.setContentAreaFilled(false);
+        btnsalle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnsalleMouseClicked(evt);
+            }
+        });
         btnsalle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsalleActionPerformed(evt);
@@ -108,6 +118,11 @@ public class menus extends javax.swing.JFrame {
         btnstock.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\stockbouton.png")); // NOI18N
         btnstock.setBorder(null);
         btnstock.setContentAreaFilled(false);
+        btnstock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnstockMouseClicked(evt);
+            }
+        });
         btnstock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnstockActionPerformed(evt);
@@ -121,6 +136,11 @@ public class menus extends javax.swing.JFrame {
         btndeco.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btndecoMouseClicked(evt);
+            }
+        });
+        btndeco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndecoActionPerformed(evt);
             }
         });
 
@@ -155,7 +175,7 @@ public class menus extends javax.swing.JFrame {
                 .addComponent(btnstock)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btndeco)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(373, Short.MAX_VALUE))
         );
 
         mainPanel.setBackground(new java.awt.Color(247, 244, 227));
@@ -254,7 +274,7 @@ public class menus extends javax.swing.JFrame {
                 .addComponent(menu1Barre2, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(Menu1Plat, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         Menu2.setBackground(new java.awt.Color(255, 255, 255));
@@ -346,17 +366,17 @@ public class menus extends javax.swing.JFrame {
                 .addComponent(Menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(Menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addComponent(titlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Menu2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Menu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(49, 49, 49))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -371,7 +391,7 @@ public class menus extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(menus, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
+            .addComponent(menus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -379,8 +399,8 @@ public class menus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnreservMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservMouseClicked
-     this.setVisible(false);
-     new Reservation().setVisible(true);
+        this.setVisible(false);
+        new Reservation().setVisible(true);      
     }//GEN-LAST:event_btnreservMouseClicked
 
     private void btnmenuonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuonActionPerformed
@@ -389,23 +409,40 @@ public class menus extends javax.swing.JFrame {
     }//GEN-LAST:event_btnmenuonActionPerformed
 
     private void btndecoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndecoMouseClicked
-    this.hide();
+        this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_btndecoMouseClicked
 
     private void btnreservActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreservActionPerformed
-        this.setVisible(false);
-        new Reservation().setVisible(true);           // TODO add your handling code here:
+                  // TODO add your handling code here:
     }//GEN-LAST:event_btnreservActionPerformed
 
     private void btnsalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalleActionPerformed
-        this.setVisible(false);
-        new gestionsalle().setVisible(true);// TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnsalleActionPerformed
 
     private void btnstockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstockActionPerformed
-        this.setVisible(false);
-        new gestionstock().setVisible(true);        // TODO add your handling code here:
+                // TODO add your handling code here:
     }//GEN-LAST:event_btnstockActionPerformed
+
+    private void btndecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndecoActionPerformed
+         // TODO add your handling code here:
+    }//GEN-LAST:event_btndecoActionPerformed
+
+    private void btnmenuonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmenuonMouseClicked
+       this.setVisible(false);
+       new Reservation().setVisible(true);
+    }//GEN-LAST:event_btnmenuonMouseClicked
+
+    private void btnsalleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalleMouseClicked
+        this.setVisible(false);
+        new gestionsalle().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnsalleMouseClicked
+
+    private void btnstockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnstockMouseClicked
+        this.setVisible(false);
+        new gestionstock().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_btnstockMouseClicked
 
     /**
      * @param args the command line arguments

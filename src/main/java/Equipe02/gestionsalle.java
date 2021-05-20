@@ -16,6 +16,7 @@ public class gestionsalle extends javax.swing.JFrame {
      */
     public gestionsalle() {
         this.setUndecorated(true);
+        this.setVisible(true);
         initComponents();
     }
 
@@ -28,6 +29,14 @@ public class gestionsalle extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        menus = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
+        btnmenuon = new javax.swing.JButton();
+        btnreserv = new javax.swing.JButton();
+        btnsalle = new javax.swing.JButton();
+        btnstock = new javax.swing.JButton();
+        btndeco = new javax.swing.JButton();
+        MainPanelSalle = new javax.swing.JPanel();
         reservationlabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablesalle = new javax.swing.JTable();
@@ -37,229 +46,136 @@ public class gestionsalle extends javax.swing.JFrame {
         jTextPane2 = new javax.swing.JTextPane();
         crlabel = new javax.swing.JLabel();
         trlabel = new javax.swing.JLabel();
-        fond = new javax.swing.JLabel();
-        menus = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
-        btnmenuon = new javax.swing.JButton();
-        btnreserv = new javax.swing.JButton();
-        btnsalle = new javax.swing.JButton();
-        btnstock = new javax.swing.JButton();
-        btndeco = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
+
+        menus.setBackground(new java.awt.Color(247, 244, 220));
+        menus.setPreferredSize(new java.awt.Dimension(284, 1080));
+
+        logo.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\LOGOMENUS.png")); // NOI18N
+
+        btnmenuon.setBackground(new java.awt.Color(247, 244, 227));
+        btnmenuon.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\Menus.png")); // NOI18N
+        btnmenuon.setBorder(null);
+        btnmenuon.setContentAreaFilled(false);
+        btnmenuon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnmenuonMouseClicked(evt);
+            }
+        });
+        btnmenuon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmenuonActionPerformed(evt);
+            }
+        });
+
+        btnreserv.setBackground(new java.awt.Color(247, 244, 227));
+        btnreserv.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\reservbouton.png")); // NOI18N
+        btnreserv.setBorder(null);
+        btnreserv.setContentAreaFilled(false);
+        btnreserv.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnreservMouseClicked(evt);
+            }
+        });
+        btnreserv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnreservActionPerformed(evt);
+            }
+        });
+
+        btnsalle.setBackground(new java.awt.Color(247, 244, 227));
+        btnsalle.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\sallebouton.png")); // NOI18N
+        btnsalle.setBorder(null);
+        btnsalle.setContentAreaFilled(false);
+        btnsalle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnsalleMouseClicked(evt);
+            }
+        });
+        btnsalle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalleActionPerformed(evt);
+            }
+        });
+
+        btnstock.setBackground(new java.awt.Color(247, 244, 227));
+        btnstock.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\stockbouton.png")); // NOI18N
+        btnstock.setBorder(null);
+        btnstock.setContentAreaFilled(false);
+        btnstock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnstockMouseClicked(evt);
+            }
+        });
+        btnstock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnstockActionPerformed(evt);
+            }
+        });
+
+        btndeco.setBackground(new java.awt.Color(247, 244, 227));
+        btndeco.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\decobtn2.png")); // NOI18N
+        btndeco.setBorder(null);
+        btndeco.setContentAreaFilled(false);
+        btndeco.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btndecoMouseClicked(evt);
+            }
+        });
+        btndeco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndecoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout menusLayout = new javax.swing.GroupLayout(menus);
+        menus.setLayout(menusLayout);
+        menusLayout.setHorizontalGroup(
+            menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menusLayout.createSequentialGroup()
+                .addComponent(logo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(menusLayout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addGroup(menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnmenuon)
+                    .addComponent(btnreserv)
+                    .addComponent(btnsalle)
+                    .addComponent(btnstock)
+                    .addComponent(btndeco))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        menusLayout.setVerticalGroup(
+            menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menusLayout.createSequentialGroup()
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnmenuon)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnreserv)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnsalle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnstock)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btndeco)
+                .addContainerGap(373, Short.MAX_VALUE))
+        );
+
+        MainPanelSalle.setBackground(new java.awt.Color(247, 244, 227));
 
         reservationlabel.setBackground(new java.awt.Color(51, 51, 51));
         reservationlabel.setFont(new java.awt.Font("Noto Sans", 0, 40)); // NOI18N
         reservationlabel.setText("Gestion de la salle");
-        getContentPane().add(reservationlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 32, -1, -1));
 
         tablesalle.setFont(new java.awt.Font("Noto Sans", 3, 20)); // NOI18N
         tablesalle.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
+                { new Long(2),  new Long(2), "OUI"},
+                { new Long(3),  new Long(2), "OUI"},
+                { new Long(4),  new Long(4), "NON"},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -313,165 +229,143 @@ public class gestionsalle extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Long.class, java.lang.Long.class, java.lang.Long.class
+                java.lang.Long.class, java.lang.Long.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
+        tablesalle.setPreferredSize(new java.awt.Dimension(1920, 1080));
         tablesalle.setRowHeight(25);
         jScrollPane1.setViewportView(tablesalle);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 800, 720));
-
         jScrollPane2.setViewportView(jTextPane1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 190, 116, 77));
-
         jScrollPane3.setViewportView(jTextPane2);
-
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(804, 187, 79, 77));
 
         crlabel.setBackground(new java.awt.Color(51, 51, 51));
         crlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
         crlabel.setText("Couverts disponibles");
-        getContentPane().add(crlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1021, 145, -1, -1));
 
         trlabel.setBackground(new java.awt.Color(51, 51, 51));
         trlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
         trlabel.setText("Tables restantes");
-        getContentPane().add(trlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 145, -1, -1));
-        getContentPane().add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        menus.setBackground(new java.awt.Color(247, 244, 227));
-        menus.setPreferredSize(new java.awt.Dimension(284, 1080));
-
-        logo.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\LOGOMENUS.png")); // NOI18N
-
-        btnmenuon.setBackground(new java.awt.Color(247, 244, 227));
-        btnmenuon.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\Menus.png")); // NOI18N
-        btnmenuon.setBorder(null);
-        btnmenuon.setContentAreaFilled(false);
-        btnmenuon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmenuonActionPerformed(evt);
-            }
-        });
-
-        btnreserv.setBackground(new java.awt.Color(247, 244, 227));
-        btnreserv.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\reservbouton.png")); // NOI18N
-        btnreserv.setBorder(null);
-        btnreserv.setContentAreaFilled(false);
-        btnreserv.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnreservMouseClicked(evt);
-            }
-        });
-        btnreserv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnreservActionPerformed(evt);
-            }
-        });
-
-        btnsalle.setBackground(new java.awt.Color(247, 244, 227));
-        btnsalle.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\sallebouton.png")); // NOI18N
-        btnsalle.setBorder(null);
-        btnsalle.setContentAreaFilled(false);
-        btnsalle.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsalleActionPerformed(evt);
-            }
-        });
-
-        btnstock.setBackground(new java.awt.Color(247, 244, 227));
-        btnstock.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\stockbouton.png")); // NOI18N
-        btnstock.setBorder(null);
-        btnstock.setContentAreaFilled(false);
-        btnstock.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnstockActionPerformed(evt);
-            }
-        });
-
-        btndeco.setBackground(new java.awt.Color(247, 244, 227));
-        btndeco.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\decobtn2.png")); // NOI18N
-        btndeco.setBorder(null);
-        btndeco.setContentAreaFilled(false);
-        btndeco.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btndecoMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout menusLayout = new javax.swing.GroupLayout(menus);
-        menus.setLayout(menusLayout);
-        menusLayout.setHorizontalGroup(
-            menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menusLayout.createSequentialGroup()
-                .addComponent(logo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(menusLayout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addGroup(menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnmenuon)
-                    .addComponent(btnreserv)
-                    .addComponent(btnsalle)
-                    .addComponent(btnstock)
-                    .addComponent(btndeco))
-                .addGap(0, 0, Short.MAX_VALUE))
+        javax.swing.GroupLayout MainPanelSalleLayout = new javax.swing.GroupLayout(MainPanelSalle);
+        MainPanelSalle.setLayout(MainPanelSalleLayout);
+        MainPanelSalleLayout.setHorizontalGroup(
+            MainPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelSalleLayout.createSequentialGroup()
+                .addGroup(MainPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainPanelSalleLayout.createSequentialGroup()
+                        .addGap(352, 352, 352)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(166, 166, 166)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MainPanelSalleLayout.createSequentialGroup()
+                        .addGap(316, 316, 316)
+                        .addComponent(trlabel)
+                        .addGap(99, 99, 99)
+                        .addComponent(crlabel))
+                    .addGroup(MainPanelSalleLayout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(216, Short.MAX_VALUE))
+            .addGroup(MainPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MainPanelSalleLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(reservationlabel)
+                    .addContainerGap(803, Short.MAX_VALUE)))
         );
-        menusLayout.setVerticalGroup(
-            menusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menusLayout.createSequentialGroup()
-                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnmenuon)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnreserv)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnsalle)
+        MainPanelSalleLayout.setVerticalGroup(
+            MainPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainPanelSalleLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(MainPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(trlabel)
+                    .addComponent(crlabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnstock)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btndeco)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(MainPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(69, 69, 69)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(450, 450, 450))
+            .addGroup(MainPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MainPanelSalleLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(reservationlabel)
+                    .addContainerGap(1007, Short.MAX_VALUE)))
         );
 
-        getContentPane().add(menus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(menus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(MainPanelSalle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(menus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(MainPanelSalle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 10, 10)))
+                .addGap(120, 120, 120))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnmenuonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuonActionPerformed
-        this.setVisible(false);
-        new menus().setVisible(true);        // TODO add your handling code here:
+                // TODO add your handling code here:
     }//GEN-LAST:event_btnmenuonActionPerformed
 
     private void btnreservMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservMouseClicked
-
         this.setVisible(false);
-        new Reservation().setVisible(true);
+        new Reservation().setVisible(true); 
     }//GEN-LAST:event_btnreservMouseClicked
 
     private void btnreservActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreservActionPerformed
-        this.setVisible(false);
-        new Reservation().setVisible(true);           // TODO add your handling code here:
+                  // TODO add your handling code here:
     }//GEN-LAST:event_btnreservActionPerformed
 
     private void btnsalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalleActionPerformed
-        this.setVisible(false);
-        new gestionsalle().setVisible(true);// TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnsalleActionPerformed
 
     private void btnstockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstockActionPerformed
-        this.setVisible(false);
-        new gestionstock().setVisible(true);        // TODO add your handling code here:
+               // TODO add your handling code here:
     }//GEN-LAST:event_btnstockActionPerformed
 
     private void btndecoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndecoMouseClicked
-        this.dispose();
+        this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_btndecoMouseClicked
+
+    private void btndecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndecoActionPerformed
+       
+    }//GEN-LAST:event_btndecoActionPerformed
+
+    private void btnstockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnstockMouseClicked
+        this.setVisible(false);
+        new gestionstock().setVisible(true); // TODO add your handling code here:
+    }//GEN-LAST:event_btnstockMouseClicked
+
+    private void btnsalleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalleMouseClicked
+        this.setVisible(false);
+        new gestionsalle().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_btnsalleMouseClicked
+
+    private void btnmenuonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmenuonMouseClicked
+        this.setVisible(false);
+        new menus().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnmenuonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -509,13 +403,13 @@ public class gestionsalle extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel MainPanelSalle;
     public javax.swing.JButton btndeco;
     public javax.swing.JButton btnmenuon;
     public javax.swing.JButton btnreserv;
     public javax.swing.JButton btnsalle;
     public javax.swing.JButton btnstock;
     private javax.swing.JLabel crlabel;
-    public javax.swing.JLabel fond;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

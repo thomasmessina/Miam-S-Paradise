@@ -16,6 +16,7 @@ public class gestionstock extends javax.swing.JFrame {
      */
     public gestionstock() {
         this.setUndecorated(true);
+        this.setVisible(true);
         initComponents();
     }
 
@@ -28,6 +29,14 @@ public class gestionstock extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        menus = new javax.swing.JPanel();
+        logo = new javax.swing.JLabel();
+        btnmenuon = new javax.swing.JButton();
+        btnreserv = new javax.swing.JButton();
+        btnsalle = new javax.swing.JButton();
+        btnstock = new javax.swing.JButton();
+        btndeco = new javax.swing.JButton();
+        mainPanelStock = new javax.swing.JPanel();
         reservationlabel = new javax.swing.JLabel();
         quantitelabel = new javax.swing.JLabel();
         ajouter = new javax.swing.JButton();
@@ -36,334 +45,13 @@ public class gestionstock extends javax.swing.JFrame {
         condiment = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablecondiment = new javax.swing.JTable();
-        fond = new javax.swing.JLabel();
-        menus = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
-        btnmenuon = new javax.swing.JButton();
-        btnreserv = new javax.swing.JButton();
-        btnsalle = new javax.swing.JButton();
-        btnstock = new javax.swing.JButton();
-        btndeco = new javax.swing.JButton();
+        condimentlabel1 = new javax.swing.JLabel();
+        condiment1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        reservationlabel.setBackground(new java.awt.Color(51, 51, 51));
-        reservationlabel.setFont(new java.awt.Font("Noto Sans", 0, 40)); // NOI18N
-        reservationlabel.setText("Gestion des stocks");
-        getContentPane().add(reservationlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(314, 32, -1, -1));
-
-        quantitelabel.setBackground(new java.awt.Color(51, 51, 51));
-        quantitelabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        quantitelabel.setText("Quantité");
-        getContentPane().add(quantitelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 136, -1, -1));
-
-        ajouter.setBackground(new java.awt.Color(247, 244, 227));
-        ajouter.setBorder(null);
-        ajouter.setContentAreaFilled(false);
-        ajouter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ajouterActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ajouter, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 168, -1, -1));
-
-        condimentlabel.setBackground(new java.awt.Color(51, 51, 51));
-        condimentlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        condimentlabel.setText("Condiment");
-        getContentPane().add(condimentlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(812, 136, -1, -1));
-
-        quantite.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        quantite.setPreferredSize(new java.awt.Dimension(186, 45));
-        quantite.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantiteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(quantite, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 168, 186, 45));
-
-        condiment.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
-        condiment.setPreferredSize(new java.awt.Dimension(186, 45));
-        condiment.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                condimentActionPerformed(evt);
-            }
-        });
-        getContentPane().add(condiment, new org.netbeans.lib.awtextra.AbsoluteConstraints(774, 168, 186, 45));
-
-        tablecondiment.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        tablecondiment.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Condiment", "Quantité"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Long.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        tablecondiment.setRowHeight(25);
-        jScrollPane1.setViewportView(tablecondiment);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 990, 820));
-        getContentPane().add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        menus.setBackground(new java.awt.Color(247, 244, 227));
+        menus.setBackground(new java.awt.Color(247, 244, 220));
         menus.setPreferredSize(new java.awt.Dimension(284, 1080));
 
         logo.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\LOGOMENUS.png")); // NOI18N
@@ -372,6 +60,11 @@ public class gestionstock extends javax.swing.JFrame {
         btnmenuon.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\Menus.png")); // NOI18N
         btnmenuon.setBorder(null);
         btnmenuon.setContentAreaFilled(false);
+        btnmenuon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnmenuonMouseClicked(evt);
+            }
+        });
         btnmenuon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnmenuonActionPerformed(evt);
@@ -397,6 +90,11 @@ public class gestionstock extends javax.swing.JFrame {
         btnsalle.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\sallebouton.png")); // NOI18N
         btnsalle.setBorder(null);
         btnsalle.setContentAreaFilled(false);
+        btnsalle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnsalleMouseClicked(evt);
+            }
+        });
         btnsalle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsalleActionPerformed(evt);
@@ -407,6 +105,11 @@ public class gestionstock extends javax.swing.JFrame {
         btnstock.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\stockbouton.png")); // NOI18N
         btnstock.setBorder(null);
         btnstock.setContentAreaFilled(false);
+        btnstock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnstockMouseClicked(evt);
+            }
+        });
         btnstock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnstockActionPerformed(evt);
@@ -420,6 +123,11 @@ public class gestionstock extends javax.swing.JFrame {
         btndeco.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btndecoMouseClicked(evt);
+            }
+        });
+        btndeco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndecoActionPerformed(evt);
             }
         });
 
@@ -457,7 +165,203 @@ public class gestionstock extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(menus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        mainPanelStock.setBackground(new java.awt.Color(247, 244, 227));
+
+        reservationlabel.setBackground(new java.awt.Color(51, 51, 51));
+        reservationlabel.setFont(new java.awt.Font("Noto Sans", 0, 40)); // NOI18N
+        reservationlabel.setText("Gestion des stocks");
+
+        quantitelabel.setBackground(new java.awt.Color(51, 51, 51));
+        quantitelabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        quantitelabel.setText("Quantité");
+
+        ajouter.setBackground(new java.awt.Color(247, 244, 227));
+        ajouter.setIcon(new javax.swing.ImageIcon("D:\\Cours\\Java\\Miam-S-Paradise\\src\\images\\btnajouter.png")); // NOI18N
+        ajouter.setBorder(null);
+        ajouter.setContentAreaFilled(false);
+        ajouter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ajouterActionPerformed(evt);
+            }
+        });
+
+        condimentlabel.setBackground(new java.awt.Color(51, 51, 51));
+        condimentlabel.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        condimentlabel.setText("Utilitaires");
+
+        quantite.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        quantite.setPreferredSize(new java.awt.Dimension(186, 45));
+        quantite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quantiteActionPerformed(evt);
+            }
+        });
+
+        condiment.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        condiment.setPreferredSize(new java.awt.Dimension(186, 45));
+        condiment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                condimentActionPerformed(evt);
+            }
+        });
+
+        tablecondiment.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        tablecondiment.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Pommes de terre", null,  new Long(50)},
+                {"Orange", null,  new Long(15)},
+                {"Oignon", null,  new Long(30)},
+                {"Gingembre", null,  new Long(10)},
+                {"Citron", null,  new Long(15)},
+                {null, "Serviettes",  new Long(100)},
+                {null, "Papier toilette",  new Long(20)},
+                {null, "Bouteille d'eau",  new Long(60)},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Condiment", "Utilitaires", "Quantité"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Long.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tablecondiment.setRowHeight(25);
+        jScrollPane1.setViewportView(tablecondiment);
+
+        condimentlabel1.setBackground(new java.awt.Color(51, 51, 51));
+        condimentlabel1.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        condimentlabel1.setText("Condiments");
+
+        condiment1.setFont(new java.awt.Font("Noto Sans", 0, 20)); // NOI18N
+        condiment1.setPreferredSize(new java.awt.Dimension(186, 45));
+        condiment1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                condiment1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout mainPanelStockLayout = new javax.swing.GroupLayout(mainPanelStock);
+        mainPanelStock.setLayout(mainPanelStockLayout);
+        mainPanelStockLayout.setHorizontalGroup(
+            mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanelStockLayout.createSequentialGroup()
+                .addGroup(mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanelStockLayout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addGroup(mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mainPanelStockLayout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(condiment1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(27, 27, 27)
+                                .addComponent(condiment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(quantite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(58, 58, 58)
+                                .addComponent(ajouter))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 639, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(mainPanelStockLayout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(condimentlabel1)
+                        .addGap(114, 114, 114)
+                        .addComponent(condimentlabel)
+                        .addGap(122, 122, 122)
+                        .addComponent(quantitelabel)))
+                .addContainerGap(390, Short.MAX_VALUE))
+            .addGroup(mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mainPanelStockLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(reservationlabel)
+                    .addContainerGap(981, Short.MAX_VALUE)))
+        );
+        mainPanelStockLayout.setVerticalGroup(
+            mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelStockLayout.createSequentialGroup()
+                .addContainerGap(228, Short.MAX_VALUE)
+                .addGroup(mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(condimentlabel)
+                        .addComponent(condimentlabel1))
+                    .addComponent(quantitelabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(quantite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(condiment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(condiment1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ajouter))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(439, 439, 439))
+            .addGroup(mainPanelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelStockLayout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(reservationlabel)
+                    .addGap(1051, 1051, 1051)))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(menus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(mainPanelStock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(menus, javax.swing.GroupLayout.DEFAULT_SIZE, 1114, Short.MAX_VALUE)
+                    .addComponent(mainPanelStock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -475,34 +379,53 @@ public class gestionstock extends javax.swing.JFrame {
     }//GEN-LAST:event_ajouterActionPerformed
 
     private void btnmenuonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuonActionPerformed
-        this.setVisible(false);
-        new menus().setVisible(true);        // TODO add your handling code here:
+              // TODO add your handling code here:
     }//GEN-LAST:event_btnmenuonActionPerformed
 
     private void btnreservMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservMouseClicked
-
         this.setVisible(false);
-        new Reservation().setVisible(true);
+        new Reservation().setVisible(true);  
     }//GEN-LAST:event_btnreservMouseClicked
 
     private void btnreservActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreservActionPerformed
-        this.setVisible(false);
-        new Reservation().setVisible(true);           // TODO add your handling code here:
+                 // TODO add your handling code here:
     }//GEN-LAST:event_btnreservActionPerformed
 
     private void btnsalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalleActionPerformed
-        this.setVisible(false);
-        new gestionsalle().setVisible(true);// TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnsalleActionPerformed
 
     private void btnstockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstockActionPerformed
-        this.setVisible(false);
-        new gestionstock().setVisible(true);        // TODO add your handling code here:
+               // TODO add your handling code here:
     }//GEN-LAST:event_btnstockActionPerformed
 
     private void btndecoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btndecoMouseClicked
-        this.dispose();
+        this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_btndecoMouseClicked
+
+    private void btndecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndecoActionPerformed
+       // TODO add your handling code here:
+    }//GEN-LAST:event_btndecoActionPerformed
+
+    private void btnstockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnstockMouseClicked
+        this.setVisible(false);
+        new gestionstock().setVisible(true); // TODO add your handling code here:
+    }//GEN-LAST:event_btnstockMouseClicked
+
+    private void btnsalleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalleMouseClicked
+        this.setVisible(false);
+        new gestionstock().setVisible(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_btnsalleMouseClicked
+
+    private void btnmenuonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmenuonMouseClicked
+        this.setVisible(false);
+        new menus().setVisible(true);          // TODO add your handling code here:
+    }//GEN-LAST:event_btnmenuonMouseClicked
+
+    private void condiment1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_condiment1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_condiment1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -547,10 +470,12 @@ public class gestionstock extends javax.swing.JFrame {
     public javax.swing.JButton btnsalle;
     public javax.swing.JButton btnstock;
     public javax.swing.JTextField condiment;
+    public javax.swing.JTextField condiment1;
     private javax.swing.JLabel condimentlabel;
-    public javax.swing.JLabel fond;
+    private javax.swing.JLabel condimentlabel1;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JLabel logo;
+    private javax.swing.JPanel mainPanelStock;
     public javax.swing.JPanel menus;
     public javax.swing.JTextField quantite;
     private javax.swing.JLabel quantitelabel;
